@@ -1,0 +1,88 @@
+﻿
+<div>
+    <h1>Register yourself if you aren't present</h1>
+
+
+    @using (@Html.BeginForm("Create", "Lector", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td><p>Your name </p></td>
+                <td><input type="text" name="Name" /> </td>
+            </tr>
+            <tr>
+                <td><p>Your surname</p></td>
+                <td><input type="text" name="Surname" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Register myself" /> </td>
+                <td></td>
+            </tr>
+        </table>
+    }
+</div>
+<br />
+<div>
+    <h1>Approve consultation</h1>
+    @using (@Html.BeginForm("Approve", "Lector", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td><p>Your ID </p></td>
+                <td><input type="text" name="LectorId" /> </td>
+            </tr>
+            <tr>
+                <td><p>Consultation ID</p></td>
+                <td><input type="text" name="ConsultationId" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Approve" /> </td>
+                <td></td>
+            </tr>
+        </table>
+    }
+</div>
+<br />
+<div>
+    <h1>Notify about missed consultation</h1>
+    @using (@Html.BeginForm("Missed", "Lector", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td><p>Your ID </p></td>
+                <td><input type="text" name="LectorId" /> </td>
+            </tr>
+            <tr>
+                <td><p>Consultation ID</p></td>
+                <td><input type="text" name="ConsultationId" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" /> </td>
+                <td></td>
+            </tr>
+        </table>
+    }
+</div>
+<br />
+<div>
+    <h1>Mark consultation as visited</h1>
+    @using (@Html.BeginForm("Visit", "Lector", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td><p>Your ID </p></td>
+                <td><input type="text" name="LectorId" /> </td>
+            </tr>
+            <tr>
+                <td><p>Consultation ID</p></td>
+                <td><input type="text" name="ConsultationId" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" /> </td>
+                <td></td>
+            </tr>
+        </table>
+    }
+</div>
+<br />
+@Html.Partial("CommonView")

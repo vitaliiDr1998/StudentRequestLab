@@ -1,0 +1,60 @@
+﻿
+<div>
+    <h1>Create consultation</h1>
+    @using (@Html.BeginForm("CreateConsultation", "Student", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td><p>Your ID </p></td>
+                <td><input type="text" name="StudentId" /> </td>
+            </tr>
+            <tr>
+                <td><p>Lector ID</p></td>
+                <td><input type="text" name="LectorId" /> </td>
+            </tr>
+            <tr>
+                <td><p>When do you to have consultation?</p></td>
+                <td><input type="datetime" name="Date" /> </td>
+            </tr>
+            <tr>
+                <td><p>Your topic</p></td>
+                <td><input type="text" name="Topic" /> </td>
+            </tr>
+            <tr>
+                <td><p>How long will it take time?</p></td>
+                <td><input type="text" name="Duration" /> </td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Send claim" /> </td>
+                <td></td>
+            </tr>
+        </table>
+    }
+
+</div>
+<br />
+<div>
+    <h1>Register yourself if you aren't present</h1>
+
+
+    @using (@Html.BeginForm("Create", "Student", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td><p>Your name </p></td>
+                <td><input type="text" name="Name" /> </td>
+            </tr>
+            <tr>
+                <td><p>Your surname :</p></td>
+                <td><input type="text" name="Surname" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Register myself" /> </td>
+                <td></td>
+            </tr>
+        </table>
+    }
+</div>
+@Html.Partial("CommonView")
+

@@ -1,0 +1,96 @@
+﻿<br />
+<h1>All students</h1>
+<table id="students">
+    <tr>
+        <td><p>Student Id </p></td>
+        <td><p>Name </p> </td>
+        <td><p>Surname </p> </td>
+        <td><p>Priority </p> </td>
+    </tr>
+    @foreach (var st in ViewBag.Students)
+    {
+        <tr id="@st.Id">
+            <td><p>@st.Id </p></td>
+            <td><p>@st.Name </p> </td>
+            <td><p>@st.Surname </p> </td>
+            <td><p>@st.Priority </p> </td>
+        </tr>
+    }
+
+</table>
+
+<h1>All lectors</h1>
+<table id="lectors">
+    <tr>
+        <td><p>Lector Id </p></td>
+        <td><p>Name </p> </td>
+        <td><p>Surname </p> </td>
+    </tr>
+    @foreach (var st in ViewBag.Lectors)
+    {
+        <tr id="@st.Id">
+            <td><p>@st.Id </p></td>
+            <td><p>@st.Name </p> </td>
+            <td><p>@st.Surname </p> </td>
+        </tr>
+    }
+
+</table>
+
+
+<br />
+<h1>All consultations</h1>
+<table id="consultations" border="1">
+    <tr>
+        <td>LectorId</td>
+        <td>StudentId</td>
+        <td>ConsultationId</td>
+        <td>Date</td>
+        <td>Duration</td>
+        <td>Topic</td>
+        <td>IsApproved</td>
+        <td>IsVisitedByStudent</td>
+        <td>IsMissed</td>
+    </tr>
+    @*@foreach (var studCons in (Dictionary<int, List<BLL.Core.Entities.ConsultationItem>>)ViewBag.Consultations.Consultations)
+        {
+
+
+            @foreach (var con in studCons.Value)
+            {
+                <tr id="@con.Id">
+                    <td>@con.Lector.Id</td>
+                    <td>@studCons.Key</td>
+                    <td>@con.Id</td>
+                    <td>@con.Date</td>
+                    <td>@con.Duration</td>
+                    <td>@con.Topic</td>
+                    @if (con.IsApproved)
+                    {
+                        <td>Approved</td>
+                    }
+                    else
+                    {
+                        <td>Not Approved</td>
+                    }
+                    @if (con.IsVisitedByStudent)
+                    {
+                        <td>Visited</td>
+                    }
+                    else
+                    {
+                        <td>Not Visited</td>
+                    }
+                    @if (con.IsMissed)
+                    {
+                        <td>Missed</td>
+                    }
+                    else
+                    {
+                        <td>Not Missed</td>
+                    }
+                </tr>
+            }
+
+        }*@
+</table>
